@@ -1,8 +1,9 @@
 const { gql } = require("apollo-server")
 
 
-const typeDefs = gql`
+export const typeDefs = gql`
 
+    #Defining the query methods
     type Query {
         hello: String
         AllStations: [Station]
@@ -11,13 +12,15 @@ const typeDefs = gql`
         FindStationByLine(line:String!): Station
         FindStationByWard(ward:String!): [Station]
     }
-
+    
+    #Defining the mutation methods
     type Mutation {
         DeleteStation(name: String!): [Station]
         EditStation(name: String!, edit: StationInput): Station
         InsertStation(input: StationInput): Station
     }
-
+    
+    #Defining the station type
     type Station {
         stationId: String!
         line: String!
@@ -27,6 +30,7 @@ const typeDefs = gql`
         ward: String!
     }
 
+    #Defining the station input
     input StationInput {
         stationId: String!
         line: String!
@@ -37,4 +41,3 @@ const typeDefs = gql`
     }
 `;
 
-module.exports = typeDefs;
