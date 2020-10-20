@@ -11,6 +11,7 @@
       "migrate": "yarn orm migration:run"
    },
    "dependencies": {
+      "apollo-fetch": "^0.7.0",
       "apollo-server": "^2.18.2",
       "apollo-server-express": "^2.18.2",
       "class-validator": "^0.12.2",

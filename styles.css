@@ -1,0 +1,10 @@
+body {
+    background-image: url(http://www.urbanrail.net/as/jp/tokyo/tokyo-centre-map.png);
+}
+
+#title {
+    margin: auto;
+    text-align: center;
+    
+    background-color: whitesmoke;
+}
